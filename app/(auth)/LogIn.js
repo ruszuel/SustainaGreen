@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, TextInput, TouchableOpacity, Dimensions, PixelRatio, Pressable, Alert, ActivityIndicator, Modal, BackHandler } from 'react-native'
+import { View, Text, SafeAreaView, TextInput, TouchableOpacity, Dimensions, Pressable, Alert, ActivityIndicator, Modal } from 'react-native'
 import React, { useState } from 'react'
 import { Checkbox } from 'expo-checkbox'
 import { MaterialCommunityIcons } from '@expo/vector-icons'

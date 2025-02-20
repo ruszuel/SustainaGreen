@@ -88,9 +88,7 @@ const Scan = () => {
     setDisclaimer(discc)
     try {
       setIsTracking(true)
-
       await stopLocationTracking();
-
       const polygon = [
         [14.859796811404639, 120.81436436348872],  // Gate 4
         [14.858098713344246, 120.81590931588866],  // Gate 3
@@ -98,7 +96,6 @@ const Scan = () => {
         [14.857244248016649, 120.81223645044504],  // Gate 1
         [14.857767939763484, 120.81207551790634],  // COL of Industrial
       ];
-
       locationSubscription.current = await Location.watchPositionAsync({
         accuracy: Location.Accuracy.Highest,
         timeInterval: 60000, distanceInterval: 20
@@ -167,7 +164,6 @@ const Scan = () => {
       try {
         if (loc) {
           const photo = await cameraRef.current.takePictureAsync();
-
           const formData = new FormData()
           formData.append('image', {
             uri: photo.uri,
@@ -177,7 +173,6 @@ const Scan = () => {
           formData.append('lat', lat)
           formData.append('long', long)
           formData.append('loc', loc)
-
           const config = {
             headers: {
               'Accept': 'application/json',
@@ -186,7 +181,6 @@ const Scan = () => {
             withCredentials: true,
             timeout: 10000,
           };
-
           const res = await axios.post('https://wasteredux-wl7q8.ondigitalocean.app/user/predict', formData, config)
           setPredictedClass(res.data.prediction)
           if (res.data.prediction !== 'Unrecognizable') {
@@ -199,13 +193,11 @@ const Scan = () => {
           setLoading(false)
           setErrorModal(true)
         }
-
       } catch (err) {
         console.log(err)
         setLoading(false)
         setErrorModal(true)
       }
-
     }
   };
 
@@ -222,7 +214,6 @@ const Scan = () => {
             SustainaGreen needs access to your camera and location to function properly.
           </Text>
         </View>
-
         <Pressable
           className="bg-blue-600 px-6 py-3 rounded-md"
           onPress={() => handlePermissionRequest()}
@@ -307,7 +298,6 @@ const Scan = () => {
           </View>
         </View>
       </Modal>
-
       <Modal animationType='fade' visible={predictedClass === 'Unrecognizable' ? true : false} transparent={true}>
         <View className='bg-black/50 flex-1 justify-center items-center'>
           <View className='bg-white w-[90%] rounded-md p-5' style={{ gap: 20 }}>
@@ -323,7 +313,6 @@ const Scan = () => {
           </View>
         </View>
       </Modal>
-
       <Modal animationType='fade' visible={disclaimer === '1' ? true : false} transparent={true}>
         <View className='bg-black/50 flex-1 justify-center items-center'>
           <View className='bg-white w-[90%] rounded-xl p-5' style={{ gap: 20 }}>

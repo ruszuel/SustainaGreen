@@ -131,7 +131,7 @@ const SetPass = () => {
       </View>
 
       <View className="items-center justify-center" style={{marginTop: moderateScale(60)}}>
-        <Text className='font-pregular' style={{fontSize: moderateScale(12)}}>By continuing, you agree with Waste Redux'</Text>
+        <Text className='font-pregular' style={{fontSize: moderateScale(12)}}>By continuing, you agree with Sustaina Green'</Text>
         <Text className="text-primary font-medium font-pregular" style={{fontSize: moderateScale(12)}}>Terms of Service 
         <Text className="text-black font-normal font-pregular"> and </Text> 
         Privacy Policy</Text>
