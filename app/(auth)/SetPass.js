@@ -50,11 +50,9 @@ const SetPass = () => {
                   college_department: college,
                   user_password: values.confirmPassword
                 }
-
                 const mail = {
                   email_address: email
                 }
-
                 const res = await axios.post('https://wasteredux-wl7q8.ondigitalocean.app/user/create', data)
                 const response = await axios.post('https://wasteredux-wl7q8.ondigitalocean.app/user/verify', mail)
                 console.log(res.data)
@@ -67,7 +65,6 @@ const SetPass = () => {
                 }
               }
             }
-
             saveData()
           }}
         >

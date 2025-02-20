@@ -32,7 +32,6 @@ const Scan = () => {
     for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
       const [xi, yi] = polygon[i];
       const [xj, yj] = polygon[j];
-
       const intersect = ((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
       if (intersect) isInside = !isInside;
     }
@@ -62,7 +61,6 @@ const Scan = () => {
           }
         }
       }
-
       if (!locationPermission?.granted && locationPermission?.canAskAgain) {
         const locationStatus = await requestLocationPermission();
         if (!locationStatus.granted) {
@@ -72,7 +70,6 @@ const Scan = () => {
           }
         }
       }
-
     } catch (error) {
       Alert.alert(
         'Permission Required',
@@ -234,11 +231,9 @@ const Scan = () => {
         case 'Plastic':
           router.push('/(steps)/NonRecycle')
           break;
-
         case 'Glass':
           router.push('/(steps)/nonRecycleGlass')
           break;
-
         case 'Metal':
           router.push('/(steps)/nonRecycleMetal')
           break;
@@ -248,11 +243,9 @@ const Scan = () => {
         case 'Plastic':
           router.push('/(steps)/recyclePlastic')
           break;
-
         case 'Glass':
           router.push('/(steps)/recycleGlass')
           break;
-
         case 'Metal':
           router.push('/(steps)/recycleMetal')
           break;

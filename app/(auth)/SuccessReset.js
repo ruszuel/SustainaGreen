@@ -7,7 +7,7 @@ import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 import axios from 'axios';
 
 const SuccessReset = () => {
-  return (
+    return (
     <SafeAreaView className="px-16 flex-1 justify-center gap-10">
         <View className='items-center'>
             {/* Inmage here */}
@@ -23,7 +23,7 @@ const SuccessReset = () => {
             </TouchableOpacity>
         </View>
     </SafeAreaView>
-  )
+    )
 }
 
 export default SuccessReset

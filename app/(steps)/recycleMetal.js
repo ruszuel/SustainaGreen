@@ -62,7 +62,7 @@ const recycleMetal = () => {
         </View>
       
       </ScrollView>
-     </SafeAreaView>
+    </SafeAreaView>
   )
 }
 

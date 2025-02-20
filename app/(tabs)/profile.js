@@ -151,7 +151,7 @@ const Profile = () => {
           </View>
           {/* Basic Info */}
           <View>
-            <Formik 
+            <Formik
               initialValues={{fname: infos.length > 0 ? infos[0].first_name : '', lname: infos.length > 0 ? infos[0].last_name : ''}}
               validationSchema={profileSchema}
               onSubmit={(val, actions) => {
@@ -289,20 +289,20 @@ const Profile = () => {
 
           {/* Profile Settings */}
           <View className='w-full' style={{display: press ? 'none' : 'flex', rowGap: moderateScale(16)}}>
-           <Pressable className='flex-row justify-between p-1' onPress={() => router.push('ChangePass')}>
+            <Pressable className='flex-row justify-between p-1' onPress={() => router.push('ChangePass')}>
             <View className='flex-row items-start' style={{gap: 15}}>
               <Icon name='lock-2-fill' size={moderateScale(20)} color='#81A969'/>  
               <Text className='font-pregular' style={{fontSize: moderateScale(13)}}>Change Password</Text>
             </View>
             <Icon name='arrow-right-s-line' size={moderateScale(20)} color='#81A969'/>
-           </Pressable>
+            </Pressable>
 
-           <Pressable onPress={logOut}>
+            <Pressable onPress={logOut}>
             <View className='flex-row items-start p-1' style={{gap: 15}}>
               <Icon name='logout-box-fill' size={moderateScale(20)} color='#9B3A1C'/>  
               <Text className='font-pregular' style={{fontSize: moderateScale(13)}}>Log out</Text>
             </View>
-           </Pressable>
+            </Pressable>
           </View>
         </View>
       </View>

@@ -6,22 +6,22 @@ import { router } from 'expo-router'
 import { moderateScale } from 'react-native-size-matters'
 
 const recyclePlastic = () => {
-  return (
+return (
     <SafeAreaView className='flex-1 mt-20 px-5' style={{gap: 50}}>
-      <ScrollView contentContainerStyle={{flexGrow: 1, marginBottom: 20, gap: 30}} showsVerticalScrollIndicator={false}>
+        <ScrollView contentContainerStyle={{flexGrow: 1, marginBottom: 20, gap: 30}} showsVerticalScrollIndicator={false}>
         <View className='flex-row items-center gap-2 mb-4'>
-          <Icon name='check-line' size={32} color='#81A969'/>
-          <Text className='text-primary font-psemibold text-lg'>The waste material is recyclable!</Text>
+            <Icon name='check-line' size={32} color='#81A969'/>
+            <Text className='text-primary font-psemibold text-lg'>The waste material is recyclable!</Text>
         </View>
 
         <View className='gap-y-4'>
-          <Text className='text-secondary font-pbold' style={{fontSize: moderateScale(22)}}> How to Recycle </Text>
-          <View className='flex-row items-center gap-2'>
-              <View className='h-9 w-9 bg-white rounded-full justify-center items-center'>
-                  <Text className='font-pbold text-primary' style={{fontSize: moderateScale(16)}}>1</Text>
-              </View>
-              <Text className='font-pregular' style={{fontSize: moderateScale(14)}}> Ensure that the item is clean and free of food. </Text>
-          </View>
+            <Text className='text-secondary font-pbold' style={{fontSize: moderateScale(22)}}> How to Recycle </Text>
+            <View className='flex-row items-center gap-2'>
+                <View className='h-9 w-9 bg-white rounded-full justify-center items-center'>
+                    <Text className='font-pbold text-primary' style={{fontSize: moderateScale(16)}}>1</Text>
+                </View>
+                <Text className='font-pregular' style={{fontSize: moderateScale(14)}}> Ensure that the item is clean and free of food. </Text>
+            </View>
 
           <View className='flex-row items-center gap-2'>
               <View className='h-10 w-10 bg-white rounded-full justify-center items-center'>
